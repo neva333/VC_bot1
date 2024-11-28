@@ -1,0 +1,12 @@
+app = "your-bot1-app-name"
+
+[build]
+  image = "node:14"
+
+[[services]]
+  internal_port = 8080
+  protocol = "tcp"
+
+  [[services.ports]]
+    handlers = ["http"]
+    port = 80
